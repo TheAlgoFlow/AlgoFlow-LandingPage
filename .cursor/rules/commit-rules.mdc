@@ -13,7 +13,7 @@ globs: *
 - Segunda linha (opcional): detalhamento breve se necessário
 
 ### 2. Idioma
-- Todos os commits devem ser escritos em **português brasileiro**
+- Todos os commits devem ser escritos em **inglês**
 
 ### 3. Autorização
 - Commits **só devem ser feitos quando o usuário solicitar explicitamente**
@@ -66,7 +66,7 @@ prefixo: descrição curta na primeira linha
 - ❌ Fazer commits sem autorização do usuário
 - ❌ Fazer múltiplos commits pequenos quando um único commit consolidado é suficiente
 - ❌ Fazer push (sempre deixar para o usuário)
-- ❌ Usar inglês nos commits
+- ❌ Usar português nos commits
 - ❌ Commits muito longos (mais de 2 linhas)
 - ❌ Mensagens vagas ("fix: corrige bug", "feat: adiciona feature")
 - ❌ **Mencionar "FASE 1", "FASE 2", "BUG 1", etc.** - usar descrições claras da funcionalidade ao invés de referências a planos internos
@@ -100,6 +100,6 @@ Caso contrário, **consolidar em um único commit**.
 - [ ] Todos os arquivos relevantes estão no staging?
 - [ ] A mensagem é clara e descritiva?
 - [ ] O prefixo está correto?
-- [ ] A mensagem está em português?
+- [ ] A mensagem está em inglês?
 - [ ] Não há referências a "FASE X" ou "BUG X"?
 - [ ] O commit é focado em uma mudança lógica?
