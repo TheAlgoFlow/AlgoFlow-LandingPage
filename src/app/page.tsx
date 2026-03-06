@@ -76,6 +76,12 @@ export default function Home() {
           </div>
         </main>
 
+        <section className="scroll-panel relative flex w-full flex-col items-center justify-center bg-zinc-50 px-4 min-h-[120vh]">
+          <div className="scroll-panel-inner w-full flex flex-col items-center justify-center min-h-[120vh]">
+
+          </div>
+        </section>
+
         <ScrollSections />
       </div>
     </>
