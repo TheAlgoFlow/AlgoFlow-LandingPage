@@ -2,6 +2,7 @@
 description: Always apply these rules when making a git commit
 globs: *
 ---
+
 # Commit Rules
 
 ## 📝 Regras Gerais

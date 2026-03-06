@@ -1,0 +1,71 @@
+---
+description: Regras de Arquitetura e Estrutura de Componentes - Atomic Design
+globs: src/components/**/*, src/pages/**/*, src/layouts/**/*
+---
+
+# Arquitetura de Componentes e UI (Atomic Design)
+
+Este projeto utiliza a metodologia **Atomic Design** para estruturar e organizar todos os componentes React e a interface de usuário.
+
+---
+
+## 🏗️ Princípios do Atomic Design
+
+A estrutura de diretórios e a responsabilidade de cada componente devem seguir rigorosamente os níveis atômicos:
+
+### 1. ⚛️ Atoms (Átomos)
+- **O que são:** Os menores blocos de construção da interface. Não podem ser quebrados em partes menores sem perder seu significado.
+- **Responsabilidade:** Apresentação pura e componentes fundamentais (HTML tags estendidos).
+- **Dependências:** Não dependem de outros componentes (nenhum outro átomo, molécula, etc). Apenas recebem estilo e tipagem atômica.
+- **Exemplos:** `Button`, `Input`, `Label`, `Icon`, `Typography`.
+- **Caminho:** `src/components/atoms/`
+
+### 2. 🧬 Molecules (Moléculas)
+- **O que são:** Grupos simples de átomos funcionando juntos como uma unidade funcional.
+- **Responsabilidade:** Fazer um bloco simples de UI funcionar (ex: um campo de busca com input e botão).
+- **Dependências:** Podem importar *Atoms*, mas **não** outras moléculas, organismos ou templates.
+- **Exemplos:** `SearchForm` (Input + Button), `CardHeader` (Title + Avatar), `FormField` (Label + Input + ErrorMessage).
+- **Caminho:** `src/components/molecules/`
+
+### 3. 🦠 Organisms (Organismos)
+- **O que são:** Componentes complexos que formam seções independentes da interface, combinando moléculas, átomos e/ou outros organismos.
+- **Responsabilidade:** Gerenciar blocos maiores da UI que têm um contexto distinto. Podem conter lógica local leve se necessário.
+- **Dependências:** Podem importar *Atoms*, *Molecules* e até outros *Organisms* menores.
+- **Exemplos:** `Header`, `Sidebar`, `ProductCard`, `LoginForm`, `Footer`.
+- **Caminho:** `src/components/organisms/`
+
+### 4. 📐 Templates (Templates)
+- **O que são:** Estruturas de layout no nível de página. Definem a grade e o posicionamento subjacente dos componentes (posicionam os organismos).
+- **Responsabilidade:** Dispor elementos na tela sem conteúdo específico injetado. Articulam a estrutura visual.
+- **Dependências:** Importam *Organisms*, *Molecules* e *Atoms*. Omitir lógica de negócio complexa ou chamadas de API.
+- **Exemplos:** `DashboardLayout`, `AuthTemplate`, `LandingPageGrid`.
+- **Caminho:** (Opcionado: pode estar em `src/components/templates/` ou `src/layouts/`)
+
+### 5. 📄 Pages (Páginas)
+- **O que são:** Instâncias específicas de templates com conteúdo real preenchido.
+- **Responsabilidade:** Lidar com roteamento, chamadas de API reais, estado global (ex: Context/Redux) e passar os dados para o template/organismos. Onde a "mágica e lógica de negócios" acontece na camada de view.
+- **Dependências:** Qualquer coisa. Trazem a aplicação à vida conectando dados aos componentes (geralmente templates/organismos).
+- **Caminho:** `src/pages/` ou `src/app/` (nos diretórios de roteamento do Next.js/Vite).
+
+---
+
+## 📏 Regras de Implementação para IA
+
+Ao criar, refatorar ou modificar componentes neste projeto, a inteligência artificial deve:
+
+1. **Atribuir o Nível Correto:** Antes de criar o componente, defina se ele é um *Atom*, *Molecule* ou *Organism*.
+2. **Respeitar o Fluxo de Dependência (Downstream Oneway):**
+   - Atoms = Importa ZERO componentes próprios.
+   - Molecules = Importa APENAS Atoms.
+   - Organisms = Importa Atoms, Molecules e/ou Organisms.
+   - Templates/Pages = Importam qualquer coisa abaixo deles.
+   - 🚫 **NUNCA violar a regra de dependência modular invertida (ex: Molécula importar Organismo).**
+3. **Padrão de Nomenclatura e Arquivos:** Sempre usar nomes PascalCase e concentrar tipagens no mesmo nível da abstração ou usar `index.ts` por diretório.
+4. **Isolamento de Lógica:** Lógica de requisição de dados (`fetch`, queries) deve estar na camada de `Pages`. Organismos recebem dados via `props` na maior parte dos casos.
+
+---
+
+## 📝 Comunicação e Estilo de Código
+- Todo componente gerado deve ter tipagem, preferencialmente usando TypeScript explícito nas `props`.
+- Sempre mantenha referências, nomes de classes ou documentação extra em **Português Brasileiro**.
+- Se for construir uma landing page no formato Atomic Design, comece **sempre** desenhando e consolidando os Atoms base antes de montar Organismos inteiros.
