@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Questrial, Inter } from "next/font/google";
 import Script from "next/script";
+import TextType from "./TextType";
 
 const questrial = Questrial({ weight: '400', subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
@@ -92,7 +93,16 @@ export default function Home() {
           </div>
 
           <h1 className={`text-5xl md:text-[4.5rem] leading-[1.05] text-center tracking-tight mb-12 max-w-5xl text-zinc-900 ${questrial.className}`}>
-            DSA Visualizer <br className="hidden md:block" /> Master algorithms visually
+            <TextType
+              text={["DSA Visualizer", "Master algorithms visually", "Learn. Visualize. Conquer."]}
+              as="span"
+              typingSpeed={70}
+              deletingSpeed={40}
+              pauseDuration={4250}
+              showCursor
+              cursorCharacter="|"
+              loop
+            />
           </h1>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-20 z-10 w-full justify-center">
