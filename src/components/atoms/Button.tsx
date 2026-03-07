@@ -35,7 +35,7 @@ export default function Button({ variant = 'primary', size = 'md', fullWidth, cl
     } else if (size === 'md') {
         baseStyles += " px-5 py-3 rounded-xl text-[14px]";
     } else if (size === 'lg') {
-        baseStyles += " px-8 py-3.5 rounded-full text-lg";
+        baseStyles += " px-8 py-2.5 rounded-full text-lg";
     } else if (size === 'icon') {
         baseStyles += " p-2 rounded-lg";
     }
