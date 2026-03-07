@@ -27,7 +27,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`fixed top-0 w-full z-50 px-16 pt-1 pb-5 flex items-center justify-between bg-[#FFFFFF] transition-transform duration-300 ease-in-out ${isScrolled ? '-translate-y-full' : 'translate-y-0'} ${inter.className}`}>
+        <header className={`fixed top-0 w-full z-50 px-16 pt-1 pb-5 flex items-center justify-between bg-[#FFFFFF] transition-transform duration-500 ease-in-out ${isScrolled ? '-translate-y-full' : 'translate-y-0'} ${inter.className}`}>
 
             {/* Left Side: Logo + Nav */}
             <div className="flex items-center gap-16">

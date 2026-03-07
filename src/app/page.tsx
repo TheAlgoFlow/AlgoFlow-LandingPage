@@ -44,7 +44,7 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-              <span className="font-medium text-xl">Algo <span className="font-light">Flow</span></span>
+              <span className="font-medium text-xl ">Algo <span className="font-light">Flow</span></span>
             </div>
 
             <h1 className={`text-5xl md:text-[4.5rem] leading-[1.05] text-center tracking-tight mb-12 max-w-5xl text-zinc-900 ${questrial.className}`}>
