@@ -1,15 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Initial check
+        handleScroll();
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <header className={`fixed top-0 w-full z-50 px-16 pt-1 pb-5 flex items-center justify-between bg-[#FFFFFF] ${inter.className}`}>
+        <header className={`fixed top-0 w-full z-50 px-16 pt-1 pb-5 flex items-center justify-between bg-[#FFFFFF] transition-transform duration-300 ease-in-out ${isScrolled ? '-translate-y-full' : 'translate-y-0'} ${inter.className}`}>
 
             {/* Left Side: Logo + Nav */}
             <div className="flex items-center gap-16">
