@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Questrial } from "next/font/google";
 import Script from "next/script";
 import TextType from "./TextType";
-import ScrollSections from "./ScrollSections";
 import Header from "./Header";
 
 const questrial = Questrial({ weight: '400', subsets: ["latin"] });
@@ -81,8 +80,6 @@ export default function Home() {
 
           </div>
         </section>
-
-        <ScrollSections />
       </div>
     </>
   );
