@@ -5,7 +5,6 @@ import TextType from "@/components/atoms/TextType";
 import LandingTemplate from "@/components/templates/LandingTemplate";
 
 import HeroSection from "@/components/organisms/HeroSection";
-import AppPreviewSection from "@/components/organisms/AppPreviewSection";
 
 const questrial = Questrial({ weight: '400', subsets: ["latin"] });
 
@@ -29,8 +28,6 @@ export default function Home() {
       <LandingTemplate>
         {/* Main Content */}
         <HeroSection questrialClassName={questrial.className} />
-
-        <AppPreviewSection />
       </LandingTemplate>
     </>
   );
