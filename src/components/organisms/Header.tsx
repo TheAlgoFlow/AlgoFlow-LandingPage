@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
-import LogoIcon from "@/components/atoms/LogoIcon";
 import Button from "@/components/atoms/Button";
 import GithubIcon from "@/components/atoms/GithubIcon";
 import NavLink from "@/components/atoms/NavLink";
+import BrandLogo from "@/components/molecules/BrandLogo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,15 +37,7 @@ export default function Header() {
             <div className="flex items-center gap-16">
 
                 {/* Logo */}
-                <div className="flex items-center gap-2">
-                    {/* Mock Logo */}
-                    <div className="w-8 h-8 relative flex items-center justify-center">
-                        <LogoIcon />
-                    </div>
-                    <span className="font-semibold text-base flex items-center gap-1">
-                        Algo <span className="font-light text-zinc-500">Flow</span>
-                    </span>
-                </div>
+                <BrandLogo imageSize={37} textClassName="font-semibold text-[17.5px] text-inherit" />
 
                 {/* Navigation */}
                 <nav className="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-[#45474D]">
