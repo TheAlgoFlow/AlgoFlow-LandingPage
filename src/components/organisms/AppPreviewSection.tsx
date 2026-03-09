@@ -22,12 +22,12 @@ export default function AppPreviewSection() {
                 {
                     scale: 1,
                     opacity: 1,
-                    duration: 1.4,
-                    ease: 'power3.out',
+                    ease: 'none',
                     scrollTrigger: {
                         trigger: section,
-                        start: 'top 70%', // Triggers when the top of the section is 70% down the screen
-                        once: true, // Only plays once
+                        start: 'top 80%', // Starts animating when 80% down the screen
+                        end: 'center center', // Finishes exactly when the section hits the middle of the screen
+                        scrub: 1, // '1' adds a buttery 1-second lag to the scrub so it feels very smooth
                     }
                 }
             );
@@ -39,7 +39,7 @@ export default function AppPreviewSection() {
     return (
         <section
             ref={sectionRef}
-            className="scroll-panel relative flex w-full flex-col items-center justify-center bg-zinc-50 min-h-[120vh]"
+            className="scroll-panel relative flex w-full flex-col items-center justify-center min-h-[120vh]"
         >
             <div className="scroll-panel-inner w-full flex flex-col items-center justify-center min-h-[130vh]">
                 <div className="w-[98vw] max-w-[2400px]">
