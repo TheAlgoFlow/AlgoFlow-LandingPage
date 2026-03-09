@@ -24,3 +24,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ── App Preview Box scroll-reveal animation ── */
+.app-preview-box {
+  will-change: transform, opacity;
+}
+
+.app-preview-box--hidden {
+  transform: scale(0.08);
+  opacity: 0;
+}
+
+.app-preview-box--revealed {
+  transform: scale(1);
+  opacity: 1;
+  transition:
+    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity   0.5s ease;
+}
