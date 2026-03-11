@@ -2,17 +2,19 @@
 
 import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
+import { useTranslation } from "@/hooks/useTranslation";
 import Button from "@/components/atoms/Button";
 import GithubIcon from "@/components/atoms/GithubIcon";
 import NavLink from "@/components/atoms/NavLink";
 import BrandLogo from "@/components/molecules/BrandLogo";
+import LanguageSwitcher from "@/components/molecules/LanguageSwitcher";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [language, setLanguage] = useState<"EN" | "PT">("EN");
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -42,11 +44,11 @@ export default function Header() {
 
                 {/* Navigation */}
                 <nav className="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-[#45474D]">
-                    <NavLink href="#">Product</NavLink>
-                    <NavLink href="#" hasDropdown>Use Cases</NavLink>
-                    <NavLink href="#">Pricing</NavLink>
-                    <NavLink href="#">Blog</NavLink>
-                    <NavLink href="#" hasDropdown>Resources</NavLink>
+                    <NavLink href="#">{t("header.product")}</NavLink>
+                    <NavLink href="#" hasDropdown>{t("header.useCases")}</NavLink>
+                    <NavLink href="#">{t("header.pricing")}</NavLink>
+                    <NavLink href="#">{t("header.blog")}</NavLink>
+                    <NavLink href="#" hasDropdown>{t("header.resources")}</NavLink>
                 </nav>
             </div>
 
@@ -72,15 +74,9 @@ export default function Header() {
                 </div>
 
                 <div className="hidden lg:flex items-center gap-4">
-                    <button
-                        onClick={() => setLanguage((lang) => (lang === "EN" ? "PT" : "EN"))}
-                        className="mt-1 text-[14px] font-medium text-[#45474D] hover:text-black transition-colors uppercase"
-                        aria-label="Switch language"
-                    >
-                        {language === "EN" ? "US" : "BR"}
-                    </button>
+                    <LanguageSwitcher variant="desktop" />
                     <Button as="a" href="https://github.com/TheAlgoFlow/AlgoFlow" target="_blank" rel="noopener noreferrer" variant="primary" size="sm" className="mt-1 hover:scale-105 hover:bg-zinc-800">
-                        GitHub
+                        {t("header.github")}
                         <GithubIcon />
                     </Button>
                 </div>
@@ -90,22 +86,16 @@ export default function Header() {
             {isMobileMenuOpen && (
                 <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-t border-black/5 shadow-lg lg:hidden flex flex-col px-6 py-4 animate-in slide-in-from-top-2 duration-200 z-50">
                     <nav className="flex flex-col gap-4 text-[15px] font-medium text-[#45474D]">
-                        <NavLink href="#" mobile>Product</NavLink>
-                        <NavLink href="#" mobile hasDropdown>Use Cases</NavLink>
-                        <NavLink href="#" mobile>Pricing</NavLink>
-                        <NavLink href="#" mobile>Blog</NavLink>
-                        <NavLink href="#" mobile hasDropdown>Resources</NavLink>
+                        <NavLink href="#" mobile>{t("header.product")}</NavLink>
+                        <NavLink href="#" mobile hasDropdown>{t("header.useCases")}</NavLink>
+                        <NavLink href="#" mobile>{t("header.pricing")}</NavLink>
+                        <NavLink href="#" mobile>{t("header.blog")}</NavLink>
+                        <NavLink href="#" mobile hasDropdown>{t("header.resources")}</NavLink>
                     </nav>
                     <div className="mt-6 flex flex-col gap-3">
-                        <button
-                            onClick={() => setLanguage((lang) => (lang === "EN" ? "PT" : "EN"))}
-                            className="text-[15px] font-medium text-[#45474D] py-2 text-left"
-                            aria-label="Switch language"
-                        >
-                            Language: {language === "EN" ? "US (English)" : "BR (Portuguese)"}
-                        </button>
+                        <LanguageSwitcher variant="mobile" />
                         <Button as="a" href="https://github.com/TheAlgoFlow/AlgoFlow" target="_blank" rel="noopener noreferrer" variant="primary" size="md" fullWidth className="hover:bg-zinc-800">
-                            GitHub
+                            {t("header.github")}
                             <GithubIcon />
                         </Button>
                     </div>
