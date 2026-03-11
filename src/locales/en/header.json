@@ -1,0 +1,13 @@
+{
+  "product": "Product",
+  "useCases": "Use Cases",
+  "pricing": "Pricing",
+  "blog": "Blog",
+  "resources": "Resources",
+  "github": "GitHub",
+  "languageEn": "US",
+  "languagePt": "BR",
+  "languageEnFull": "English (US)",
+  "languagePtFull": "Portuguese (BR)",
+  "languageLabel": "Language: "
+}
