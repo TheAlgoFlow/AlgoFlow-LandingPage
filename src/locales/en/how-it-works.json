@@ -1,6 +1,6 @@
 {
   "eyebrow": "How It Works",
-  "heading": "Master algorithms in 4 simple steps",
+  "heading": "Master algorithms in 3 simple steps",
   "cta": "Try AlgoFlow Free",
   "imagePlaceholder": "Upload screenshot here",
   "steps": [
@@ -21,12 +21,6 @@
       "stepLabel": "Step 3",
       "title": "Pseudocode synced to the step",
       "description": "The code panel highlights the current line as the visualization runs. See exactly what happens at each step."
-    },
-    {
-      "label": "Practice",
-      "stepLabel": "Step 4",
-      "title": "Jump straight to practice",
-      "description": "One click to LeetCode, HackerRank, or NeetCode. Apply what you learned immediately with real problems."
     }
   ]
 }

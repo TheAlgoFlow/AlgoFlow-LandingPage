@@ -4,6 +4,7 @@ import howItWorks from "./how-it-works.json";
 import painPoints from "./pain-points.json";
 import faq from "./faq.json";
 import cta from "./cta.json";
+import demo from "./demo.json";
 
 const pt = {
   header,
@@ -12,6 +13,7 @@ const pt = {
   painPoints,
   faq,
   cta,
+  demo,
 };
 
 export default pt;
