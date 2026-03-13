@@ -1,8 +1,7 @@
 ---
 description: Always apply these rules when making a git commit
-globs: *
+alwaysApply: false
 ---
-
 # Commit Rules
 
 ## 📝 Regras Gerais

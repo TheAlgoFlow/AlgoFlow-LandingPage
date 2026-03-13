@@ -2,7 +2,7 @@ import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 
 type ButtonBaseProps = {
     variant?: 'primary' | 'secondary' | 'ghost';
-    size?: 'sm' | 'md' | 'lg' | 'icon';
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'icon';
     fullWidth?: boolean;
     children: React.ReactNode;
     className?: string;
@@ -30,7 +30,9 @@ export default function Button({ variant = 'primary', size = 'md', fullWidth, cl
     }
 
     // Size styles
-    if (size === 'sm') {
+    if (size === 'xs') {
+        baseStyles += " px-4 py-2 rounded-full text-[14px]";
+    } else if (size === 'sm') {
         baseStyles += " px-5 py-2.5 rounded-full text-[14px]";
     } else if (size === 'md') {
         baseStyles += " px-5 py-3 rounded-xl text-[14px]";

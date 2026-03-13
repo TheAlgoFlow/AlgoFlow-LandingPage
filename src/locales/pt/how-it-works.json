@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Como Funciona",
+  "heading": "Domine algoritmos em 4 passos simples",
+  "cta": "Experimente o AlgoFlow Grátis",
+  "imagePlaceholder": "Envie sua captura de tela aqui",
+  "steps": [
+    {
+      "label": "Escolha",
+      "stepLabel": "Passo 1",
+      "title": "Escolha seu algoritmo",
+      "description": "Escolha entre 25 algoritmos em 4 categorias — ordenação, busca, grafos e mais. Encontre exatamente o que precisa sem perder tempo."
+    },
+    {
+      "label": "Visualize",
+      "stepLabel": "Passo 2",
+      "title": "Veja cada estado em ação",
+      "description": "Avance passo a passo com controles interativos. Avance ou volte em cada estado — chega de diagramas estáticos."
+    },
+    {
+      "label": "Entenda",
+      "stepLabel": "Passo 3",
+      "title": "Pseudocódigo sincronizado",
+      "description": "O painel de código destaca a linha atual enquanto a visualização roda. Veja exatamente o que acontece em cada passo."
+    },
+    {
+      "label": "Pratique",
+      "stepLabel": "Passo 4",
+      "title": "Vá direto para a prática",
+      "description": "Um clique para LeetCode, HackerRank ou NeetCode. Aplique o que aprendeu com problemas reais."
+    }
+  ]
+}
