@@ -1,0 +1,27 @@
+{
+  "eyebrow": "The Problem",
+  "heading": "Learning algorithms shouldn't feel like guesswork",
+  "cards": [
+    {
+      "badge": "01",
+      "statement": "Reading pseudocode doesn't show you why it works",
+      "description": "Walls of code and abstract notation leave you guessing at the intuition behind every step."
+    },
+    {
+      "badge": "02",
+      "statement": "Static diagrams freeze the moment — they can't show state changes",
+      "description": "A single snapshot can't capture how data transforms at each iteration or recursive call."
+    },
+    {
+      "badge": "03",
+      "statement": "Misunderstanding one algorithm costs hours of interview prep",
+      "description": "One shaky concept compounds — you reach a mock interview unable to reason through the solution."
+    },
+    {
+      "badge": "04",
+      "statement": "Switching between a textbook and a debugger breaks your focus",
+      "description": "Context-switching between theory and a bare REPL makes it hard to connect the two."
+    }
+  ],
+  "transitionLine": "There's a better way to build the intuition that sticks."
+}

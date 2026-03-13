@@ -6,6 +6,7 @@ import LandingTemplate from "@/components/templates/LandingTemplate";
 
 import HeroSection from "@/components/organisms/HeroSection";
 import HowItWorksSection from "@/components/organisms/HowItWorksSection";
+import PainPointsSection from "@/components/organisms/PainPointsSection";
 import FaqSection from "@/components/organisms/FaqSection";
 import CtaSection from "@/components/organisms/CtaSection";
 
@@ -30,6 +31,7 @@ export default function Home() {
         {/* Main Content */}
         <HeroSection questrialClassName={questrial.className} />
         <HowItWorksSection />
+        <PainPointsSection />
         <FaqSection />
         <CtaSection />
       </LandingTemplate>

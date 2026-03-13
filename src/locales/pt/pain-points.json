@@ -1,0 +1,27 @@
+{
+  "eyebrow": "O Problema",
+  "heading": "Aprender algoritmos não deveria parecer um chute",
+  "cards": [
+    {
+      "badge": "01",
+      "statement": "Ler pseudocódigo não mostra por que funciona",
+      "description": "Paredes de código e notação abstrata te deixam tentando adivinhar a intuição por trás de cada passo."
+    },
+    {
+      "badge": "02",
+      "statement": "Diagramas estáticos congelam o momento — não mostram mudanças de estado",
+      "description": "Um único snapshot não consegue capturar como os dados se transformam a cada iteração ou chamada recursiva."
+    },
+    {
+      "badge": "03",
+      "statement": "Não entender um algoritmo custa horas de preparação para entrevistas",
+      "description": "Um conceito frágil se multiplica — você chega a uma entrevista sem conseguir raciocinar sobre a solução."
+    },
+    {
+      "badge": "04",
+      "statement": "Alternar entre livro didático e depurador quebra seu foco",
+      "description": "Trocar de contexto entre teoria e um REPL puro dificulta a conexão entre os dois."
+    }
+  ],
+  "transitionLine": "Existe uma forma melhor de construir a intuição que realmente fica."
+}
