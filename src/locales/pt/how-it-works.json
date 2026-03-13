@@ -1,6 +1,6 @@
 {
   "eyebrow": "Como Funciona",
-  "heading": "Domine algoritmos em 4 passos simples",
+  "heading": "Domine algoritmos em 3 passos simples",
   "cta": "Experimente o AlgoFlow Grátis",
   "imagePlaceholder": "Envie sua captura de tela aqui",
   "steps": [
@@ -21,12 +21,6 @@
       "stepLabel": "Passo 3",
       "title": "Pseudocódigo sincronizado",
       "description": "O painel de código destaca a linha atual enquanto a visualização roda. Veja exatamente o que acontece em cada passo."
-    },
-    {
-      "label": "Pratique",
-      "stepLabel": "Passo 4",
-      "title": "Vá direto para a prática",
-      "description": "Um clique para LeetCode, HackerRank ou NeetCode. Aplique o que aprendeu com problemas reais."
     }
   ]
 }
