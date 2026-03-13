@@ -6,11 +6,9 @@ import LandingTemplate from "@/components/templates/LandingTemplate";
 
 import HeroSection from "@/components/organisms/HeroSection";
 import HowItWorksSection from "@/components/organisms/HowItWorksSection";
-<<<<<<< HEAD
 import PainPointsSection from "@/components/organisms/PainPointsSection";
-=======
+import FeaturesSection from "@/components/organisms/FeaturesSection";
 import DemoSection from "@/components/organisms/DemoSection";
->>>>>>> 8a78a5d18c8fadc760603f74ec09e32fcd467b71
 import FaqSection from "@/components/organisms/FaqSection";
 import CtaSection from "@/components/organisms/CtaSection";
 
@@ -35,11 +33,9 @@ export default function Home() {
         {/* Main Content */}
         <HeroSection questrialClassName={questrial.className} />
         <HowItWorksSection />
-<<<<<<< HEAD
         <PainPointsSection />
-=======
+        <FeaturesSection />
         <DemoSection />
->>>>>>> 8a78a5d18c8fadc760603f74ec09e32fcd467b71
         <FaqSection />
         <CtaSection />
       </LandingTemplate>
