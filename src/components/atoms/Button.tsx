@@ -22,11 +22,11 @@ export default function Button({ variant = 'primary', size = 'md', fullWidth, cl
 
     // Variant styles
     if (variant === 'primary') {
-        baseStyles += " bg-[#121317] text-white hover:bg-[#2F3034] shadow-sm hover:shadow-md";
+        baseStyles += " bg-[#5200FF] text-white hover:bg-[#4400DD] shadow-sm hover:shadow-md";
     } else if (variant === 'secondary') {
-        baseStyles += " bg-[#F8F8FB] border border-zinc-300 text-zinc-600 hover:bg-[#F0F1F5]";
+        baseStyles += " bg-surface border border-border text-muted hover:bg-[#F5F1EB] hover:border-faint";
     } else if (variant === 'ghost') {
-        baseStyles += " hover:bg-black/5 text-zinc-900 shadow-none";
+        baseStyles += " hover:bg-foreground/5 text-foreground shadow-none";
     }
 
     // Size styles

@@ -7,12 +7,12 @@ export default function DemoSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-[#F8FAFC] px-4 py-16 md:py-24">
+    <section className="bg-surface px-4 py-16 md:py-24">
       <div className="mx-auto max-w-5xl text-center">
-        <p className="mb-4 text-sm font-medium uppercase tracking-wider text-[#F97316]">
+        <p className="mb-4 text-sm font-medium uppercase tracking-wider text-accent-orange">
           {t("demo.eyebrow")}
         </p>
-        <h2 className="mb-8 text-3xl font-semibold tracking-tight text-[#121317] md:text-4xl">
+        <h2 className="mb-8 text-3xl font-display font-semibold tracking-tight text-foreground md:text-4xl">
           {t("demo.heading")}
         </h2>
 

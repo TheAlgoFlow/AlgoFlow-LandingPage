@@ -27,15 +27,15 @@ export default function HowItWorksSection() {
   const stepNumber = String(activeStep + 1).padStart(2, "0");
 
   return (
-    <section className="bg-[#F8FAFC] px-4 py-16 md:py-24">
+    <section className="bg-surface px-4 py-16 md:py-24">
       <div className="mx-auto max-w-5xl">
         {/* Eyebrow */}
-        <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-[#F97316]">
+        <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-accent-orange">
           {t("howItWorks.eyebrow")}
         </p>
 
         {/* Heading */}
-        <h2 className="mb-10 text-center text-3xl font-semibold tracking-tight text-[#121317] md:text-4xl">
+        <h2 className="mb-10 text-center text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
           {t("howItWorks.heading")}
         </h2>
 
@@ -52,11 +52,11 @@ export default function HowItWorksSection() {
                 onClick={() => setActiveStep(index)}
                 className={`flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium transition-colors md:px-5 ${
                   isActive
-                    ? "bg-[#121317] text-white"
-                    : "border border-zinc-200 bg-[#F8F8FB] text-zinc-600 hover:bg-[#F0F1F5]"
+                    ? "bg-foreground text-white"
+                    : "border border-border bg-surface text-muted hover:bg-background"
                 }`}
               >
-                <span className={isActive ? "text-[#F97316]" : "text-zinc-400"}>
+                <span className={isActive ? "text-accent-orange" : "text-faint"}>
                   {num}
                 </span>
                 {label}
@@ -66,13 +66,13 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Content card */}
-        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
           <div className="grid sm:grid-cols-2">
             {/* Left panel - text */}
             <div className="relative p-8 sm:p-10">
               {/* Watermark */}
               <span
-                className="pointer-events-none absolute left-4 top-4 text-[8rem] font-bold leading-none text-[#F97316] opacity-[0.08] md:left-6 md:top-6 md:text-[10rem]"
+                className="pointer-events-none absolute left-4 top-4 text-[8rem] font-bold leading-none text-accent-orange opacity-[0.08] md:left-6 md:top-6 md:text-[10rem]"
                 aria-hidden
               >
                 {stepNumber}
@@ -80,24 +80,24 @@ export default function HowItWorksSection() {
 
               <div className="relative">
                 {/* Icon chip */}
-                <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-[#F97316] p-2 text-white">
+                <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-accent-orange p-2 text-white">
                   {STEP_ICONS[activeStep]}
                 </div>
 
-                <p className="mb-1 text-xs font-medium uppercase tracking-wider text-[#F97316]">
+                <p className="mb-1 text-xs font-medium uppercase tracking-wider text-accent-orange">
                   {t(`howItWorks.steps.${activeStep}.stepLabel`)}
                 </p>
-                <h3 className="mb-4 text-2xl font-semibold text-[#121317] md:text-3xl">
+                <h3 className="mb-4 text-2xl font-semibold text-foreground md:text-3xl">
                   {t(`howItWorks.steps.${activeStep}.title`)}
                 </h3>
-                <p className="text-zinc-600 leading-relaxed">
+                <p className="text-muted leading-relaxed">
                   {t(`howItWorks.steps.${activeStep}.description`)}
                 </p>
               </div>
             </div>
 
             {/* Right panel - image */}
-            <div className="flex min-h-[240px] items-center justify-center border-t border-zinc-200 bg-zinc-100 p-6 sm:min-h-[320px] sm:border-l sm:border-t-0">
+            <div className="flex min-h-[240px] items-center justify-center border-t border-border bg-background p-6 sm:min-h-[320px] sm:border-l sm:border-t-0">
               <div className="relative h-full w-full">
                 <Image
                   src={STEP_IMAGES[activeStep]}

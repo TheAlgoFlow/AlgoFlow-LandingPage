@@ -89,15 +89,15 @@ export default function PainPointsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#FFF7ED] px-4 py-16 md:py-24">
+    <section ref={sectionRef} className="bg-[#FAF7F2] px-4 py-16 md:py-24">
       <div className="mx-auto max-w-5xl">
         {/* Eyebrow */}
-        <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-[#F97316]">
+        <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-accent-orange">
           {t("painPoints.eyebrow")}
         </p>
 
         {/* Heading */}
-        <h2 className="mb-12 text-center text-3xl font-semibold text-[#121317] md:text-4xl">
+        <h2 className="mb-12 text-center text-3xl font-semibold text-foreground md:text-4xl">
           {t("painPoints.heading")}
         </h2>
 
@@ -107,15 +107,15 @@ export default function PainPointsSection() {
             <div
               key={card.badge}
               ref={(el) => { cardRefs.current[index] = el; }}
-              className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm"
+              className="rounded-2xl border border-border bg-surface p-8 shadow-sm"
             >
-              <span className="mb-4 block font-mono text-sm font-semibold text-[#F97316]">
+              <span className="mb-4 block font-mono text-sm font-semibold text-accent-orange">
                 {card.badge}
               </span>
-              <p className="mb-3 text-lg italic text-zinc-700">
+              <p className="mb-3 text-lg italic text-foreground">
                 &ldquo;{card.statement}&rdquo;
               </p>
-              <p className="text-sm text-zinc-500">{card.description}</p>
+              <p className="text-sm text-muted">{card.description}</p>
             </div>
           ))}
         </div>
@@ -123,7 +123,7 @@ export default function PainPointsSection() {
         {/* Emotional transition line */}
         <p
           ref={transitionRef}
-          className="mt-12 text-center text-base italic text-zinc-500"
+          className="mt-12 text-center text-base italic text-muted"
         >
           {t("painPoints.transitionLine")}
         </p>

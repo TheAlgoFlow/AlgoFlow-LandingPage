@@ -31,15 +31,15 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="bg-white px-4 py-16 md:py-24">
+    <section className="bg-background px-4 py-16 md:py-24">
       <div className="mx-auto max-w-2xl">
         {/* Eyebrow */}
-        <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-[#F97316]">
+        <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-accent-orange">
           {t("faq.eyebrow")}
         </p>
 
         {/* Heading */}
-        <h2 className="mb-10 text-center text-3xl font-semibold tracking-tight text-[#121317] md:text-4xl">
+        <h2 className="mb-10 text-center text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
           {t("faq.heading")}
         </h2>
 
@@ -50,7 +50,7 @@ export default function FaqSection() {
             return (
               <div
                 key={i}
-                className="rounded-lg border border-zinc-200 bg-white px-5 py-4"
+                className="rounded-lg border border-border bg-surface px-5 py-4"
               >
                 <button
                   type="button"
@@ -60,11 +60,11 @@ export default function FaqSection() {
                   aria-controls={`faq-answer-${i}`}
                   id={`faq-question-${i}`}
                 >
-                  <span className="font-semibold text-[#121317]">
+                  <span className="font-semibold text-foreground">
                     {t(`faq.items.${i}.q`)}
                   </span>
                   <span
-                    className={`shrink-0 text-zinc-600 transition-transform duration-200 ${
+                    className={`shrink-0 text-muted transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   >
@@ -76,7 +76,7 @@ export default function FaqSection() {
                     id={`faq-answer-${i}`}
                     role="region"
                     aria-labelledby={`faq-question-${i}`}
-                    className="mt-3 text-sm leading-relaxed text-zinc-600"
+                    className="mt-3 text-sm leading-relaxed text-muted"
                   >
                     {t(`faq.items.${i}.a`)}
                   </div>
