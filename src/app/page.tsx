@@ -1,12 +1,15 @@
-import Image from "next/image";
-import { Questrial } from "next/font/google";
 import Script from "next/script";
-import TextType from "@/components/atoms/TextType";
 import LandingTemplate from "@/components/templates/LandingTemplate";
 
 import HeroSection from "@/components/organisms/HeroSection";
-
-const questrial = Questrial({ weight: '400', subsets: ["latin"] });
+import StatsSection from "@/components/organisms/StatsSection";
+import HowItWorksSection from "@/components/organisms/HowItWorksSection";
+import FeaturesSection from "@/components/organisms/FeaturesSection";
+import CategoriesSection from "@/components/organisms/CategoriesSection";
+import PainPointsSection from "@/components/organisms/PainPointsSection";
+import DemoSection from "@/components/organisms/DemoSection";
+import FaqSection from "@/components/organisms/FaqSection";
+import CtaSection from "@/components/organisms/CtaSection";
 
 export default function Home() {
   return (
@@ -24,8 +27,15 @@ export default function Home() {
         `}
       </Script>
       <LandingTemplate>
-        {/* Main Content */}
-        <HeroSection questrialClassName={questrial.className} />
+        <HeroSection />
+        <StatsSection />
+        <HowItWorksSection />
+        <FeaturesSection />
+        <CategoriesSection />
+        <PainPointsSection />
+        <DemoSection />
+        <FaqSection />
+        <CtaSection />
       </LandingTemplate>
     </>
   );

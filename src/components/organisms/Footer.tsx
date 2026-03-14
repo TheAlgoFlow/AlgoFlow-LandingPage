@@ -3,7 +3,7 @@ import BrandLogo from "@/components/molecules/BrandLogo";
 
 export default function Footer() {
     return (
-        <footer className="border-t border-zinc-200 bg-zinc-50 relative overflow-hidden">
+        <footer className="border-t border-border bg-surface relative overflow-hidden">
             {/* Subtle background gradient */}
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_100%,rgba(0,0,0,0.03),transparent_50%)]" />
 
@@ -11,16 +11,16 @@ export default function Footer() {
                 <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
                     <div>
                         <div className="mb-4">
-                            <BrandLogo imageSize={40} textClassName="font-semibold text-[20px] text-zinc-900" />
+                            <BrandLogo imageSize={40} textClassName="font-semibold text-[20px] text-foreground" />
                         </div>
-                        <p className="text-sm leading-relaxed text-zinc-500 mb-6">
-                            Visualize e domine algoritmos passo a passo com a nossa plataforma interativa.
+                        <p className="text-sm leading-relaxed text-muted mb-6">
+                            Visualize and master algorithms step by step with our interactive platform.
                         </p>
                         <div className="flex items-center gap-4">
                             {/* Twitter / X */}
                             <a
                                 href="#"
-                                className="text-zinc-400 transition-all hover:text-zinc-900 hover:scale-110"
+                                className="text-muted transition-all hover:text-foreground hover:scale-110"
                                 aria-label="Twitter/X"
                             >
                                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -30,7 +30,7 @@ export default function Footer() {
                             {/* Instagram */}
                             <a
                                 href="#"
-                                className="text-zinc-400 transition-all hover:text-zinc-900 hover:scale-110"
+                                className="text-muted transition-all hover:text-foreground hover:scale-110"
                                 aria-label="Instagram"
                             >
                                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -41,25 +41,25 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="mb-4 font-semibold text-zinc-900">Produto</h3>
+                        <h3 className="mb-4 font-semibold text-foreground">Product</h3>
                         <ul className="space-y-3 text-sm">
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Recursos
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
+                                    Features
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Preços
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
+                                    Pricing
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
                                     Premium
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
                                     FAQ
                                 </Link>
                             </li>
@@ -67,62 +67,62 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="mb-4 font-semibold text-zinc-900">Empresa</h3>
+                        <h3 className="mb-4 font-semibold text-foreground">Company</h3>
                         <ul className="space-y-3 text-sm">
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Sobre
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
+                                    About
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
                                     Roadmap
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Código Aberto
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
+                                    Open Source
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="mb-4 font-semibold text-zinc-900">Legal</h3>
+                        <h3 className="mb-4 font-semibold text-foreground">Legal</h3>
                         <ul className="space-y-3 text-sm">
                             <li>
-                                <Link href="/privacy" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Política de Privacidade
+                                <Link href="/privacy" className="text-muted transition-colors hover:text-foreground">
+                                    Privacy Policy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/terms" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Termos de Serviço
+                                <Link href="/terms" className="text-muted transition-colors hover:text-foreground">
+                                    Terms of Service
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Segurança de Dados
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
+                                    Data Security
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-zinc-500 transition-colors hover:text-zinc-900">
-                                    Contato
+                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
+                                    Contact
                                 </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="mt-12 border-t border-zinc-200 pt-8">
+                <div className="mt-12 border-t border-border pt-8">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p className="text-sm text-zinc-500 text-center md:text-left">
-                            © 2026 AlgoFlow. Domine algoritmos com visualizações interativas.
+                        <p className="text-sm text-muted text-center md:text-left">
+                            © 2026 AlgoFlow. Master algorithms with interactive visualizations.
                         </p>
                     </div>
                 </div>

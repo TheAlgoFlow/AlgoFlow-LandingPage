@@ -1,15 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Inter } from "next/font/google";
 import { useTranslation } from "@/hooks/useTranslation";
 import Button from "@/components/atoms/Button";
 import GithubIcon from "@/components/atoms/GithubIcon";
 import NavLink from "@/components/atoms/NavLink";
 import BrandLogo from "@/components/molecules/BrandLogo";
 import LanguageSwitcher from "@/components/molecules/LanguageSwitcher";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,7 +31,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`fixed top-0 w-full z-50 px-16 pt-1 pb-5 flex items-center justify-between bg-[#FFFFFF] transition-transform duration-500 ease-in-out ${isScrolled ? '-translate-y-full' : 'translate-y-0'} ${inter.className}`}>
+        <header className={`fixed top-0 w-full z-50 px-16 pt-1 pb-5 flex items-center justify-between bg-background/95 backdrop-blur-sm border-b border-border/50 transition-transform duration-500 ease-in-out ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
 
             {/* Left Side: Logo + Nav */}
             <div className="flex items-center gap-16">
@@ -43,7 +40,7 @@ export default function Header() {
                 <BrandLogo imageSize={37} textClassName="font-semibold text-[17.5px] text-inherit" />
 
                 {/* Navigation */}
-                <nav className="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-[#45474D]">
+                <nav className="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-muted">
                     <NavLink href="#">{t("header.product")}</NavLink>
                     <NavLink href="#" hasDropdown>{t("header.useCases")}</NavLink>
                     <NavLink href="#">{t("header.pricing")}</NavLink>
@@ -58,7 +55,7 @@ export default function Header() {
                 <div className="flex lg:hidden items-center">
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="p-2 hover:bg-black/5 rounded-lg transition-colors"
+                        className="p-2 hover:bg-border/40 rounded-lg transition-colors"
                         aria-label="Toggle menu"
                     >
                         {isMobileMenuOpen ? (
@@ -75,7 +72,7 @@ export default function Header() {
 
                 <div className="hidden lg:flex items-center gap-4">
                     <LanguageSwitcher variant="desktop" />
-                    <Button as="a" href="https://github.com/TheAlgoFlow/AlgoFlow" target="_blank" rel="noopener noreferrer" variant="primary" size="sm" className="mt-1 hover:scale-105 hover:bg-zinc-800">
+                    <Button as="a" href="https://github.com/TheAlgoFlow/AlgoFlow" target="_blank" rel="noopener noreferrer" variant="primary" size="sm" className="mt-1 hover:scale-105">
                         {t("header.github")}
                         <GithubIcon />
                     </Button>
@@ -84,8 +81,8 @@ export default function Header() {
 
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-t border-black/5 shadow-lg lg:hidden flex flex-col px-6 py-4 animate-in slide-in-from-top-2 duration-200 z-50">
-                    <nav className="flex flex-col gap-4 text-[15px] font-medium text-[#45474D]">
+                <div className="absolute top-full left-0 w-full bg-surface/95 backdrop-blur-sm border-t border-border shadow-lg lg:hidden flex flex-col px-6 py-4 animate-in slide-in-from-top-2 duration-200 z-50">
+                    <nav className="flex flex-col gap-4 text-[15px] font-medium text-muted">
                         <NavLink href="#" mobile>{t("header.product")}</NavLink>
                         <NavLink href="#" mobile hasDropdown>{t("header.useCases")}</NavLink>
                         <NavLink href="#" mobile>{t("header.pricing")}</NavLink>
@@ -94,7 +91,7 @@ export default function Header() {
                     </nav>
                     <div className="mt-6 flex flex-col gap-3">
                         <LanguageSwitcher variant="mobile" />
-                        <Button as="a" href="https://github.com/TheAlgoFlow/AlgoFlow" target="_blank" rel="noopener noreferrer" variant="primary" size="md" fullWidth className="hover:bg-zinc-800">
+                        <Button as="a" href="https://github.com/TheAlgoFlow/AlgoFlow" target="_blank" rel="noopener noreferrer" variant="primary" size="md" fullWidth>
                             {t("header.github")}
                             <GithubIcon />
                         </Button>

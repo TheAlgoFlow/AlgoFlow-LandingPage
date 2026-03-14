@@ -8,9 +8,9 @@ interface LandingTemplateProps {
 
 export default function LandingTemplate({ children }: LandingTemplateProps) {
     return (
-        <div className="min-h-screen bg-white text-zinc-900 font-sans relative flex flex-col">
+        <div className="min-h-screen bg-background text-foreground font-sans relative flex flex-col">
             {/* Background decoration to match the image's subtle dotted/starry background */}
-            <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)', backgroundSize: '48px 48px' }}></div>
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #78716C 1.5px, transparent 1.5px)', backgroundSize: '48px 48px' }}></div>
 
             {/* Header */}
             <Header />

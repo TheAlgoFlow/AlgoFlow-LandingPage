@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Frequently Asked Questions",
+  "heading": "Everything you need to know before getting started",
+  "items": [
+    {
+      "q": "What algorithms are available?",
+      "a": "AlgoFlow includes 25+ algorithms across sorting, searching, graphs, and more. Each comes with step-by-step visualization and synced pseudocode."
+    },
+    {
+      "q": "Can I use AlgoFlow on mobile?",
+      "a": "AlgoFlow is optimized for desktop and tablet. A mobile-friendly experience is planned for a future release."
+    },
+    {
+      "q": "How does the practice integration work?",
+      "a": "One click takes you to LeetCode, HackerRank, or NeetCode with the algorithm you just learned. Apply your knowledge immediately with real problems."
+    },
+    {
+      "q": "How do I get support?",
+      "a": "Reach out via the support link in the app or email us. We typically respond within 24 hours."
+    },
+    {
+      "q": "How can I contribute to AlgoFlow (make a PR)?",
+      "a": "AlgoFlow is open source! You can contribute by reporting bugs, suggesting features, or submitting pull requests on our GitHub repository. Check the README for contribution guidelines."
+    }
+  ]
+}

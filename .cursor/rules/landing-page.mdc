@@ -1,0 +1,62 @@
+---
+description: AlgoFlow project context and conventions for the landing page
+globs: src/app/page.tsx, src/app/layout.tsx
+alwaysApply: false
+---
+
+# AlgoFlow — Landing Page Context
+
+## What is AlgoFlow?
+
+- **Product:** Interactive algorithm visualizer for learning DSA
+- **Tagline:** "Step through algorithms, not just read about them."
+- **Audience:** CS students, interview prep, educators
+- **Value:** Free, open-source, no signup — 25 algorithms with step-by-step playback
+
+---
+
+## Key Features (for hero, features section, etc.)
+
+- Step-by-step playback — scrub forward/backward through every state
+- 25 algorithms across 4 categories
+- Code panel — pseudocode synced to current step
+- Side-by-side compare — run two algorithms at once
+- Big-O reference — time/space complexity cheat sheet
+- Custom input — test with your own data
+- Practice links — LeetCode, HackerRank, NeetCode
+- i18n (en/pt), light/dark theme
+
+---
+
+## Routes
+
+- `/` — Home (category cards)
+- `/visualizer/[category]` — Algorithm list per category
+- `/visualizer/[category]/[slug]` — Individual visualizer
+- `/reference` — Big-O cheat sheet
+- `/big-o` — Big-O guide with growth curves
+- `/compare` — Side-by-side comparison
+
+---
+
+## Design System
+
+- **Colors:** Use `var(--bg)`, `var(--text)`, `var(--text-muted)`, `var(--border)`, `var(--shadow-md)` — never hardcode
+- **Fonts:** `var(--font-display)` headings, `var(--font-body)` body, `var(--font-mono)` code/stats
+- **Layout:** Max width 1100px, main has `margin-left: 220px` (sidebar)
+- **Logo:** "Algo**F**l**o**w" — F/l/o/w use category colors
+
+---
+
+## i18n
+
+- Always use `t()` from `useI18n()` for user-facing text
+- Keys in `public/locales/{en,pt}/` — add new strings to both
+
+---
+
+## Current Homepage Structure
+
+- Header: title, stats (X categories · Y algorithms), search button (⌘K)
+- Category cards: grid of 4, link to `/visualizer/{category}`
+- SearchOverlay: modal for quick algorithm search

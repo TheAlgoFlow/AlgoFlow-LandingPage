@@ -1,0 +1,26 @@
+{
+  "eyebrow": "How It Works",
+  "heading": "Master algorithms in 3 simple steps",
+  "cta": "Try AlgoFlow Free",
+  "imagePlaceholder": "Upload screenshot here",
+  "steps": [
+    {
+      "label": "Choose",
+      "stepLabel": "Step 1",
+      "title": "Choose your algorithm",
+      "description": "Pick from 25 algorithms across 4 categories — sorting, searching, graphs, and more. Find exactly what you need without endless scrolling."
+    },
+    {
+      "label": "Visualize",
+      "stepLabel": "Step 2",
+      "title": "Watch every state play out",
+      "description": "Step through each algorithm with interactive scrub controls. Move forward or backward through every state — no more static diagrams."
+    },
+    {
+      "label": "Understand",
+      "stepLabel": "Step 3",
+      "title": "Pseudocode synced to the step",
+      "description": "The code panel highlights the current line as the visualization runs. See exactly what happens at each step."
+    }
+  ]
+}
