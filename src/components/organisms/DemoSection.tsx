@@ -7,7 +7,7 @@ export default function DemoSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-surface px-4 py-16 md:py-24">
+    <section id="demo" className="bg-surface px-4 py-16 md:py-24">
       <div className="mx-auto max-w-5xl text-center">
         <p className="mb-4 text-sm font-medium uppercase tracking-wider text-accent-orange">
           {t("demo.eyebrow")}
@@ -17,7 +17,14 @@ export default function DemoSection() {
         </h2>
 
         <div className="mx-auto mb-8 max-w-3xl rounded-2xl bg-[#1a1a1a] p-3 shadow-2xl">
-          <div className="aspect-video w-full rounded-lg bg-black" />
+          <video
+            src="/assets/demo-algoflow.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="aspect-video w-full rounded-lg object-cover"
+          />
         </div>
 
         <div className="flex justify-center">

@@ -26,7 +26,7 @@ export default function HowItWorksSection() {
   const stepNumber = String(activeStep + 1).padStart(2, "0");
 
   return (
-    <section className="bg-surface px-4 py-16 md:py-24">
+    <section id="how-it-works" className="bg-surface px-4 py-16 md:py-24">
       <div className="mx-auto max-w-5xl">
         {/* Eyebrow */}
         <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-accent-orange">
