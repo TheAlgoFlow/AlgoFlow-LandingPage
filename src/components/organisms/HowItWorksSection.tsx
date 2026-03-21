@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image"; // Import Image component
 import Button from "@/components/atoms/Button";
 import { useTranslation } from "@/hooks/useTranslation";
 
@@ -14,10 +13,10 @@ const STEP_ICONS = [
   <svg key="understand" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>,
 ];
 
-const STEP_IMAGES = [
-  "/assets/Img-1.png",
-  "/assets/Img-2.png",
-  "/assets/Img-3.png",
+const STEP_VIDEOS = [
+  "/assets/demo-algoflow.mp4",
+  "/assets/array.mp4",
+  "/assets/classico.mp4",
 ];
 
 export default function HowItWorksSection() {
@@ -99,12 +98,13 @@ export default function HowItWorksSection() {
             {/* Right panel - image */}
             <div className="flex min-h-[240px] items-center justify-center border-t border-border bg-background p-6 sm:min-h-[320px] sm:border-l sm:border-t-0">
               <div className="relative h-full w-full">
-                <Image
-                  src={STEP_IMAGES[activeStep]}
-                  alt={t(`howItWorks.steps.${activeStep}.title`)}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                  className="rounded-lg object-cover shadow-lg"
+                <video
+                  src={STEP_VIDEOS[activeStep]}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 h-full w-full rounded-lg object-cover shadow-lg"
                 />
               </div>
             </div>
