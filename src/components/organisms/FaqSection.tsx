@@ -31,7 +31,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="bg-background px-4 py-16 md:py-24">
+    <section id="faq" className="bg-background px-4 py-16 md:py-24">
       <div className="mx-auto max-w-2xl">
         {/* Eyebrow */}
         <p className="mb-2 text-center text-sm font-medium uppercase tracking-wider text-accent-orange">

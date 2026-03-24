@@ -7,6 +7,11 @@ import { useTranslation } from "@/hooks/useTranslation";
 export default function Footer() {
     const { t } = useTranslation();
 
+    const scrollTo = (id: string) => (e: React.MouseEvent) => {
+        e.preventDefault();
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <footer className="border-t border-border bg-surface relative overflow-hidden">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_100%,rgba(0,0,0,0.03),transparent_50%)]" />
@@ -37,10 +42,10 @@ export default function Footer() {
                     <div>
                         <h3 className="mb-4 font-semibold text-foreground">{t("footer.product")}</h3>
                         <ul className="space-y-3 text-sm">
-                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.features")}</Link></li>
+                            <li><a href="#features" onClick={scrollTo("features")} className="text-muted transition-colors hover:text-foreground cursor-pointer">{t("footer.links.features")}</a></li>
                             <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.pricing")}</Link></li>
                             <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.premium")}</Link></li>
-                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.faq")}</Link></li>
+                            <li><a href="#faq" onClick={scrollTo("faq")} className="text-muted transition-colors hover:text-foreground cursor-pointer">{t("footer.links.faq")}</a></li>
                         </ul>
                     </div>
 
