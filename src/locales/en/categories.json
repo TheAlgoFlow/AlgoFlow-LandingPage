@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Categories",
+  "heading": "Four pillars of computer science",
+  "subheading": "Every algorithm you need for interviews and beyond, visualized and explained.",
+  "cta": "Explore All Algorithms",
+  "items": [
+    { "name": "Sorting", "description": "Bubble, Merge, Quick, Heap, and more" },
+    { "name": "Searching", "description": "Binary Search, BFS, DFS, A*" },
+    { "name": "Data Structures", "description": "Arrays, Trees, Graphs, Heaps" },
+    { "name": "Dynamic Programming", "description": "Fibonacci, Knapsack, LCS" }
+  ]
+}

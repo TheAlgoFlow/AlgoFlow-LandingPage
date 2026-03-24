@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import BrandLogo from "@/components/molecules/BrandLogo";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer className="border-t border-border bg-surface relative overflow-hidden">
-            {/* Subtle background gradient */}
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_100%,rgba(0,0,0,0.03),transparent_50%)]" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -14,25 +18,15 @@ export default function Footer() {
                             <BrandLogo imageSize={40} textClassName="font-semibold text-[20px] text-foreground" />
                         </div>
                         <p className="text-sm leading-relaxed text-muted mb-6">
-                            Visualize and master algorithms step by step with our interactive platform.
+                            {t("footer.tagline")}
                         </p>
                         <div className="flex items-center gap-4">
-                            {/* Twitter / X */}
-                            <a
-                                href="#"
-                                className="text-muted transition-all hover:text-foreground hover:scale-110"
-                                aria-label="Twitter/X"
-                            >
+                            <a href="#" className="text-muted transition-all hover:text-foreground hover:scale-110" aria-label="Twitter/X">
                                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                                 </svg>
                             </a>
-                            {/* Instagram */}
-                            <a
-                                href="#"
-                                className="text-muted transition-all hover:text-foreground hover:scale-110"
-                                aria-label="Instagram"
-                            >
+                            <a href="#" className="text-muted transition-all hover:text-foreground hover:scale-110" aria-label="Instagram">
                                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
                                 </svg>
@@ -41,80 +35,32 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="mb-4 font-semibold text-foreground">Product</h3>
+                        <h3 className="mb-4 font-semibold text-foreground">{t("footer.product")}</h3>
                         <ul className="space-y-3 text-sm">
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Features
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Pricing
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Premium
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    FAQ
-                                </Link>
-                            </li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.features")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.pricing")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.premium")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.faq")}</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="mb-4 font-semibold text-foreground">Company</h3>
+                        <h3 className="mb-4 font-semibold text-foreground">{t("footer.company")}</h3>
                         <ul className="space-y-3 text-sm">
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    About
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Blog
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Roadmap
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Open Source
-                                </Link>
-                            </li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.about")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.blog")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.roadmap")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.openSource")}</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="mb-4 font-semibold text-foreground">Legal</h3>
+                        <h3 className="mb-4 font-semibold text-foreground">{t("footer.legal")}</h3>
                         <ul className="space-y-3 text-sm">
-                            <li>
-                                <Link href="/privacy" className="text-muted transition-colors hover:text-foreground">
-                                    Privacy Policy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/terms" className="text-muted transition-colors hover:text-foreground">
-                                    Terms of Service
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Data Security
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-muted transition-colors hover:text-foreground">
-                                    Contact
-                                </Link>
-                            </li>
+                            <li><Link href="/privacy" className="text-muted transition-colors hover:text-foreground">{t("footer.links.privacy")}</Link></li>
+                            <li><Link href="/terms" className="text-muted transition-colors hover:text-foreground">{t("footer.links.terms")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.dataSecurity")}</Link></li>
+                            <li><Link href="#" className="text-muted transition-colors hover:text-foreground">{t("footer.links.contact")}</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -122,7 +68,7 @@ export default function Footer() {
                 <div className="mt-12 border-t border-border pt-8">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="text-sm text-muted text-center md:text-left">
-                            © 2026 AlgoFlow. Master algorithms with interactive visualizations.
+                            {t("footer.copyright")}
                         </p>
                     </div>
                 </div>

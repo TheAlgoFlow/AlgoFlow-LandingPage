@@ -1,67 +1,23 @@
 {
   "eyebrow": "Features",
-  "heading": "Everything you need to master algorithms",
-  "subtitle": "Go beyond reading — interact with every step, inspect the code, and compare strategies side by side.",
-  "modules": [
+  "heading": "Everything you need to actually learn",
+  "subheading": "Not just diagrams. Not just pseudocode. Real animations tied to real code, step by step.",
+  "items": [
     {
-      "badge": "Step-by-Step Playback",
-      "title": "Scrub through every algorithm state",
-      "subtitle": "Move forward and backward through each step at your own pace. Never lose track of where the algorithm is or why it made a decision.",
-      "cta": "Try AlgoFlow Free",
-      "items": [
-        {
-          "label": "Forward & backward scrubbing",
-          "description": "Step through any point in the execution — revisit tricky states without restarting."
-        },
-        {
-          "label": "Auto-play with speed control",
-          "description": "Watch it run automatically at 0.5× to 4× speed, or pause and inspect at any moment."
-        },
-        {
-          "label": "Active element highlighting",
-          "description": "Every comparison, swap, and pointer change is visually highlighted in real time."
-        }
-      ]
+      "title": "Visual step-by-step execution",
+      "description": "Watch every comparison, swap, and traversal in real time as it happens."
     },
     {
-      "badge": "Code Panel",
-      "title": "Pseudocode in sync with every step",
-      "subtitle": "The code panel tracks exactly which line is executing as the visualization runs, bridging the gap between theory and implementation.",
-      "cta": "Try AlgoFlow Free",
-      "items": [
-        {
-          "label": "Line-by-line sync",
-          "description": "The active pseudocode line highlights automatically as the visualizer advances."
-        },
-        {
-          "label": "Multiple language views",
-          "description": "See the same algorithm expressed in pseudocode, Python, or JavaScript."
-        },
-        {
-          "label": "Step annotations",
-          "description": "Inline notes explain why each line matters in the context of the current state."
-        }
-      ]
+      "title": "Code alongside the visual",
+      "description": "See the exact lines executing as the animation plays — no gap between theory and code."
     },
     {
-      "badge": "Side-by-Side Compare",
-      "title": "Run two algorithms at once",
-      "subtitle": "Load the same dataset into two visualizers and watch them race. Instantly see the performance and strategy differences between any two algorithms.",
-      "cta": "Try AlgoFlow Free",
-      "items": [
-        {
-          "label": "Synchronized playback",
-          "description": "Both visualizers step in lockstep so comparisons stay meaningful."
-        },
-        {
-          "label": "Live Big-O stats",
-          "description": "Operations count and time/space complexity shown for each algorithm in real time."
-        },
-        {
-          "label": "Custom input support",
-          "description": "Test with your own array or graph data to see how each algorithm handles edge cases."
-        }
-      ]
+      "title": "4 complete algorithm categories",
+      "description": "Sorting, searching, data structures, and dynamic programming — all in one place."
+    },
+    {
+      "title": "Multiple language implementations",
+      "description": "JavaScript, Python, Java, C++ — pick what you know and learn in context."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "type1": "DSA Visualizer",
-  "type2": "Master algorithms visually",
-  "type3": "Learn. Visualize. Conquer.",
-  "primaryCTA": "Try Algo Flow",
-  "secondaryCTA": "Watch quick demo"
+  "heading1": "Master Algorithms.",
+  "heading2": "Actually.",
+  "subheading": "Step-by-step interactive visualizations for sorting, searching, data structures, and dynamic programming — the way your textbook never could.",
+  "ctaPrimary": "Start Learning Free",
+  "ctaSecondary": "See How It Works"
 }

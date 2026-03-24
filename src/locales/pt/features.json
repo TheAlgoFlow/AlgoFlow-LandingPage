@@ -1,67 +1,23 @@
 {
   "eyebrow": "Funcionalidades",
-  "heading": "Tudo que você precisa para dominar algoritmos",
-  "subtitle": "Vá além da leitura — interaja com cada etapa, inspecione o código e compare estratégias lado a lado.",
-  "modules": [
+  "heading": "Tudo que você precisa para realmente aprender",
+  "subheading": "Não só diagramas. Não só pseudocódigo. Animações reais ligadas a código real, passo a passo.",
+  "items": [
     {
-      "badge": "Reprodução Passo a Passo",
-      "title": "Percorra cada estado do algoritmo",
-      "subtitle": "Avance e volte em cada etapa no seu próprio ritmo. Nunca perca o fio do algoritmo ou por que ele tomou uma decisão.",
-      "cta": "Experimente o AlgoFlow",
-      "items": [
-        {
-          "label": "Navegação para frente e para trás",
-          "description": "Avance para qualquer ponto da execução — revisite estados difíceis sem reiniciar."
-        },
-        {
-          "label": "Reprodução automática com controle de velocidade",
-          "description": "Assista rodar automaticamente de 0,5× a 4× de velocidade, ou pause e inspecione a qualquer momento."
-        },
-        {
-          "label": "Destaque de elemento ativo",
-          "description": "Cada comparação, troca e mudança de ponteiro é destacada visualmente em tempo real."
-        }
-      ]
+      "title": "Execução visual passo a passo",
+      "description": "Veja cada comparação, troca e travessia em tempo real conforme acontece."
     },
     {
-      "badge": "Painel de Código",
-      "title": "Pseudocódigo sincronizado com cada etapa",
-      "subtitle": "O painel de código rastreia exatamente qual linha está sendo executada enquanto a visualização avança, conectando teoria e implementação.",
-      "cta": "Experimente o AlgoFlow",
-      "items": [
-        {
-          "label": "Sincronização linha a linha",
-          "description": "A linha ativa do pseudocódigo é destacada automaticamente conforme o visualizador avança."
-        },
-        {
-          "label": "Múltiplas visões de linguagem",
-          "description": "Veja o mesmo algoritmo expresso em pseudocódigo, Python ou JavaScript."
-        },
-        {
-          "label": "Anotações por etapa",
-          "description": "Notas explicam por que cada linha importa no contexto do estado atual."
-        }
-      ]
+      "title": "Código junto com o visual",
+      "description": "Veja as linhas exatas sendo executadas enquanto a animação roda — sem lacuna entre teoria e código."
     },
     {
-      "badge": "Comparação Lado a Lado",
-      "title": "Execute dois algoritmos ao mesmo tempo",
-      "subtitle": "Carregue o mesmo conjunto de dados em dois visualizadores e veja-os competir. Identifique imediatamente as diferenças de desempenho e estratégia.",
-      "cta": "Experimente o AlgoFlow",
-      "items": [
-        {
-          "label": "Reprodução sincronizada",
-          "description": "Ambos os visualizadores avançam em sincronia para que as comparações façam sentido."
-        },
-        {
-          "label": "Estatísticas Big-O em tempo real",
-          "description": "Contagem de operações e complexidade de tempo/espaço exibidas para cada algoritmo em tempo real."
-        },
-        {
-          "label": "Suporte a entrada personalizada",
-          "description": "Teste com seu próprio array ou dados de grafo para ver como cada algoritmo lida com casos extremos."
-        }
-      ]
+      "title": "4 categorias completas de algoritmos",
+      "description": "Ordenação, busca, estruturas de dados e programação dinâmica — tudo em um só lugar."
+    },
+    {
+      "title": "Implementações em múltiplas linguagens",
+      "description": "JavaScript, Python, Java, C++ — escolha o que você conhece e aprenda em contexto."
     }
   ]
 }

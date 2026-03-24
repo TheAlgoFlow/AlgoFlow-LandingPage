@@ -1,0 +1,12 @@
+{
+  "eyebrow": "Categorias",
+  "heading": "Quatro pilares da ciência da computação",
+  "subheading": "Todos os algoritmos que você precisa para entrevistas e além, visualizados e explicados.",
+  "cta": "Explorar Todos os Algoritmos",
+  "items": [
+    { "name": "Ordenação", "description": "Bubble, Merge, Quick, Heap e muito mais" },
+    { "name": "Busca", "description": "Busca Binária, BFS, DFS, A*" },
+    { "name": "Estruturas de Dados", "description": "Arrays, Árvores, Grafos, Heaps" },
+    { "name": "Programação Dinâmica", "description": "Fibonacci, Mochila, LCS" }
+  ]
+}

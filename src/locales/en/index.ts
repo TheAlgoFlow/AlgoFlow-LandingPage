@@ -6,6 +6,9 @@ import features from "./features.json";
 import faq from "./faq.json";
 import cta from "./cta.json";
 import demo from "./demo.json";
+import stats from "./stats.json";
+import categories from "./categories.json";
+import footer from "./footer.json";
 
 const en = {
   header,
@@ -16,6 +19,9 @@ const en = {
   faq,
   cta,
   demo,
+  stats,
+  categories,
+  footer,
 };
 
 export default en;
