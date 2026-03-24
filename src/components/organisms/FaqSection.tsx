@@ -50,12 +50,12 @@ export default function FaqSection() {
             return (
               <div
                 key={i}
-                className="rounded-lg border border-border bg-surface px-5 py-4"
+                className="rounded-lg border border-border bg-surface"
               >
                 <button
                   type="button"
                   onClick={() => handleToggle(i)}
-                  className="flex w-full items-center justify-between gap-4 text-left"
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left cursor-pointer"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${i}`}
                   id={`faq-question-${i}`}
@@ -76,7 +76,7 @@ export default function FaqSection() {
                     id={`faq-answer-${i}`}
                     role="region"
                     aria-labelledby={`faq-question-${i}`}
-                    className="mt-3 text-sm leading-relaxed text-muted"
+                    className="px-5 pb-4 text-sm leading-relaxed text-muted"
                   >
                     {t(`faq.items.${i}.a`)}
                   </div>
