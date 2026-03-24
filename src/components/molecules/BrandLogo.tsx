@@ -23,8 +23,8 @@ export default function BrandLogo({
                     src="/AlgoFlow-Logo.png"
                     alt="Algo Flow Logo"
                     fill
+                    sizes={`${imageSize}px`}
                     className="object-contain"
-                    priority
                 />
             </div>
             <span className={`flex items-center gap-1 whitespace-nowrap ${textClassName}`}>
